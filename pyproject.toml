@@ -1,16 +1,17 @@
 [project]
-name = "fizzbuzz-tdd-kata"
+name = "fizzbuzz-kata"
 version = "0.1.0"
-description = "Add your description here"
+description = "A TDD kata: FizzBuzz, from notebook exploration to a tested, published package"
 readme = "README.md"
 authors = [
     { email = "ouguzine.douaa@gmail.com" }
 ]
-requires-python = ">=3.12"
+requires-python = ">=3.11"
+license = {text = "MIT"}
 dependencies = []
 
 [project.scripts]
-fizzbuzz-tdd-kata = "fizzbuzz_tdd_kata:main"
+fizzbuzz-kata = "fizzbuzz_kata:main"
 
 [build-system]
 requires = ["uv_build>=0.12.17,<0.13.0"]
@@ -22,3 +23,8 @@ dev = [
     "pytest>=9.1.1",
     "ruff>=0.16.8",
 ]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
