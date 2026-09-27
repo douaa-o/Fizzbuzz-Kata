@@ -270,7 +270,6 @@ def _():
 @app.cell
 def _():
     n_input = mo.ui.number(start=1, stop=1000, step=1, value=15, label="n")
-    n_input
     return (n_input,)
 
 
@@ -281,7 +280,6 @@ def _(n_input):
         output = mo.md(f"`fizzbuzz({n_input.value})` → **{result}**")
     except ValueError as e:
         output = mo.md(f"⚠️ Error: {e}")
-    output
     return
 
 
