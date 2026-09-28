@@ -30,7 +30,7 @@ dev = [
 pythonpath = ["src"]
 testpaths = ["tests"]
 
-tool.ruff
+[tool.ruff]
 line-length = 100
 target-version = "py311"
 
