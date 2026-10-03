@@ -11,7 +11,7 @@ license = {text = "MIT"}
 dependencies = []
 
 [project.scripts]
-fizzbuzz-kata = "fizzbuzz_kata:main"
+fizzbuzz-kata = "fizzbuzz_kata.cli:main"
 
 [build-system]
 requires = ["uv_build>=0.12.17,<0.13.0"]
@@ -20,6 +20,7 @@ build-backend = "uv_build"
 [dependency-groups]
 dev = [
     "marimo>=0.24.2",
+    "matplotlib>=3.11.2",
     "mypy>=2.3.1",
     "pytest>=9.1.1",
     "pytest-cov>=7.1.0",
