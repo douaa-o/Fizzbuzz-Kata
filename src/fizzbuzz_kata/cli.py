@@ -1,19 +1,25 @@
 # src/fizzbuzz_kata/cli.py
 """Command-line interface for fizzbuzz_kata."""
+
 import argparse
 from fizzbuzz_kata.core import fizzbuzz
+
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="fizzbuzz-kata",
         description="Print the FizzBuzz value for one number, or a range of numbers.",
     )
-    parser.add_argument("n", type=int, nargs="?",         
-        help="A single number to convert (ignored if --start/--end are given).",    
-        )    
-    parser.add_argument("--start", type=int, help="Start of a range (inclusive).")    
-    parser.add_argument("--end", type=int, help="End of a range (inclusive).")    
+    parser.add_argument(
+        "n",
+        type=int,
+        nargs="?",
+        help="A single number to convert (ignored if --start/--end are given).",
+    )
+    parser.add_argument("--start", type=int, help="Start of a range (inclusive).")
+    parser.add_argument("--end", type=int, help="End of a range (inclusive).")
     return parser
+
 
 def main() -> None:
     parser = build_parser()
@@ -26,6 +32,6 @@ def main() -> None:
     else:
         parser.error("Provide either a single number, or --start and --end.")
 
+
 if __name__ == "main":
     main()
-
