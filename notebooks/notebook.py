@@ -269,6 +269,5 @@ def _(n_input):
         return output
 
 
-
 if __name__ == "__main__":
     app.run()
